@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="flex justify-between items-center px-6 py-[20px] border-b-2 border-[#EBEBEB]">
+        <h1 class="font-bold text-base font-Poppins">Starweather</h1>
+  
+
+
+
+
+          <div class="relative inline-block text-left">  
+            <div class="flex " dir="rtl">  
+                <img class="md:hidden" src="./assets/location.svg" alt="">
+                <img class="hidden md:flex" src="./assets/locationlg.svg" alt="">
+                <button id="dropdownButton" type="button" class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-[#B3B3B3] rounded-md focus:outline-none">  
+                
+                    انتخاب شهر
+              
+                      
+                </button>  
+                <img src="./assets/icon.svg" alt="">
+            </div>  
+        
+            <div id="dropdownMenu" class="absolute right-0 z-10 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden text-right" dir="rtl">  
+                <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="dropdownButton">  
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" onclick="getcityname(this)">تهران</a>  
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" onclick="getcityname(this)">یزد</a>  
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"onclick="getcityname(this)">شیراز</a>  
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"onclick="getcityname(this)">اصفهان</a>  
+                </div>  
+            </div>  
+        </div>
+            
+
+            
+
+          
+    </header>
+    <main class="flex justify-center items-center">
+        <section class="flex flex-col justify-center items-stretch mt-10 px-[19px] max-w-[488px] ">
+            <div class="flex justify-center items-center flex-col gap-6">
+                <img  id="weather-icon" src="./assets/01_sunny_color.svg" alt="">
+                <div class="text-center flex flex-col items-center">
+                    <h2 id="tempmain" class="font-Vazirmatn font-semibold text-4xl">27°</h2>
+                    <h3 id="mainweather" class="text-[#B3B3B3] font-Vazirmatn font-normal text-sm">تهران 23 شهریور   </h3>
+                </div>
+            </div>
+            <div class="flex flex-col p-6  border-2 rounded-md border-[#EBEBEB] mt-6 gap-5 ">
+                <div class="flex justify-between items-center  "><span id="mainhumidity" class="font-Vazirmatn ">44 %</span><h2 class="font-Vazirmatn ">رطوبت</h2></div>
+                <div class="flex justify-between items-center  "><span id="mainwind" class="font-Vazirmatn ">10 km/h</span><h2 class="font-Vazirmatn ">باد</h2></div>
+            </div>
+    
+            <div class="mt-8  ">
+                <h2 class=" font-Vazirmatn font-normal text-sm text-right ">روز های آینده تهران</h2>
+                <div id="dailylist" class="mt-2 flex gap-3 items-center justify-center">
+            
+               
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
